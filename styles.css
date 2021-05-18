@@ -22,9 +22,26 @@ body {
     margin: .1rem 2rem 2rem 2rem;
     color: black;
     font-family: 'Raleway', sans-serif;
-    font-size: .875rem; 
+    font-size: 1rem; /* 14px */
     font-weight: var(--fw-light);
 }
+
+h2 {
+    font-size: 1.4rem; /* 28px */
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+p {
+    font-size: 1.03rem;
+}
+
+img {
+    width: 100%;
+}
+/* End General Styles */
 
 /* Navigation Desktop Styles */
 
@@ -80,12 +97,12 @@ header {
 .nav__list1 .nav__link:hover {
     text-decoration: underline;
 }
+/* End Navigation Desktop Styles */
 
 /* Navigation Mobile */
 
-@media (max-width:515px) {
+@media (max-width:530px) {
     body {
-        font-size: 1.15em; 
         margin: 0;
     }
 
@@ -94,8 +111,8 @@ header {
     }
 
     .logo {
-        width: 7rem;
-        margin-left: 2rem;
+        width: 6.5rem;
+        margin-left: 1.5rem;
     }
 
     .nav {
@@ -105,74 +122,373 @@ header {
         text-align: right;
     }
 
-    .nav1 {
-        display: inline-block;
-        margin-right: 2rem;
-    }
-
-    .nav2 {
-        display: block;
-        width: 100%;
-        margin-top: 1rem;
+    .nav__list1 {
+        margin-right: .5rem;
+        text-align: right;
+        justify-content: flex-end;
     }
 
     .nav__list2 {
         justify-content: center;
+        margin-top: 1.5rem;
     }
 
     .nav__list2 .nav__link {
         margin-right: 0;
-       
+        border-bottom: 3.5px solid var(--clr-grey);
+        display: inline-block;
+        padding: 0 0 15px 0;
+        width: 100%;
+    }
+
+    .nav__list2 {
+        display: flex;
     }
 
     .nav__list2 .nav__list-item {
-        width: 50%;
+        height: 40px;
+        flex:1;
         text-align: center;
         padding: 1rem 0;
-        border-bottom: 2px solid var(--clr-grey);
-    }
-
-    .nav__list2 .nav__link1 {
-        padding: 1rem 3.75rem;
-    }
-
-    .nav__list2 .nav__link2 {
-        padding: 1rem 5.5rem;
     }
 
     .nav__list2 .nav__link:hover {
         color: var(--clr-blue);
         border-top: none;
-        border-bottom: 2px solid var(--clr-blue);
+        border-bottom: 3.5px solid var(--clr-blue);
   }
 
     }
+/* End Navigation Mobile */
 
 /* Search Section Mobile */
 
-/* Search Section Desktop */
+.search {
+    padding-top: 0;
+    margin: .75rem 1.5rem 2rem 1.5rem;
+}
 
+.search__title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.search__description {
+    margin-top: .8rem;
+    margin-bottom: 2.25rem;
+}
+
+.search__bar {
+    display: flex;
+    width: 100%;
+    height: 50px;
+    place-items: center;
+    border: 1px solid var(--clr-grey);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
+
+.icon__location {
+    background-color: var(--clr-grey);
+    height: 100%;
+    width: 60px;
+    text-align: center;
+    line-height: 50px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.icon__search {
+    background-color: var(--clr-blue);
+    height: 100%;
+    width: 60px;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 15px;  
+}
+
+.icon__search i:hover {
+    opacity: 50%;
+}
+
+.search__field {
+    width: calc(100% - 60px);
+    text-align: left;
+    padding-left: 18px;
+}
+/* End Search Section Mobile */
+
+/* Search Section Desktop */
+@media (min-width: 530px) {
+    .search__bar {
+        width: 300px;
+    }
+
+    .search__title {
+        margin-top: .5rem;
+    }
+
+    .search__description {
+        margin-bottom: 1rem;
+    }
+}
+/* End Search Section Desktop */
 
 /* Filter Section Mobile */
+.filter {
+    margin: 0 1.5rem 1.75rem 1.5rem;
+}
+
+.filter__title {
+    margin-bottom: 1rem;
+}
+
+.filter__items {
+    margin-top: 0rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.filter__item {
+    display: flex;
+    height: 50px;
+    place-items: center;
+    border: 2px solid rgba(0,0,0,.15);
+    border-radius: 25px;
+    margin-bottom: .75rem;
+    margin-right: .75rem;
+    position: relative;
+}
+
+.icon__money, .icon__person, .icon__heart, .icon__dog {
+    background-color: var(--clr-light-blue);
+    border-radius: 50%;
+    height: 110%;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--clr-blue);
+    font-size: 1.25rem;
+    z-index: 1;
+    position:absolute;
+    left: -2px;
+    top: -2px;
+    bottom: 2px;
+}
+
+.filter__item-description {
+    text-align: right;
+    padding-left: 60px;
+    padding-right: 13px;
+    font-size: .95rem;
+    font-weight: var(--fw-bold);
+}
+
+.filter__description {
+    display: flex;
+    height: 50px;
+    place-items: center;
+    margin-top: 1rem;
+}
+
+.icon__info {
+    color: var(--clr-blue);
+    display: inline-block;
+    padding: 3px 8px;
+    border: 1px solid rgba(0,0,0,.1);
+    border-radius: 50%;
+    font-size: .85rem;
+    top: 3px;
+    align-self: center;
+}
+
+.filter__text {
+    padding-left: 10px;
+    font-size: 1rem;
+}
+/* End Filter Section Mobile */
 
 /* Filter Section Desktop */
+/* End Filter Section Desktop */
 
+/* Popular Section Mobile */
+.popular {
+    background-color: var(--clr-grey);
+}
 
-/* Most Popular Section Mobile */
+.popular__content {
+    padding: 2rem 1.5rem 1.25rem 1.5rem;
+}
 
-/* Most Popular Section Desktop */
+.popular__heading {
+    display: flex;
+    place-items: center;
+}
 
+.popular__title {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: calc(100% - 1.4rem);
+}
+
+.icon__chart {
+   font-size: 1.4rem; 
+}
+
+.popular__items {
+    margin-top: 1.65rem;
+}
+
+.popular__item {
+    display: block;
+    height: 145px;
+    background-color: white;
+    margin-bottom: .85rem;
+    padding: 5px;
+    box-shadow: 2px 1px 10px rgba(0,0,0,.2);
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.popular__image {
+    float:left;
+    height: 100%;
+    width: 135px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.popular__text {
+    padding-left: 150px;
+    word-wrap: wrap;
+}
+
+.popular__hotel {
+    margin-top: .85rem;
+    margin-bottom: .5rem;
+}
+
+.popular__description {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: .875rem;
+}
+
+.popular__stars {
+    font-size: .7rem;
+    color: var(--clr-blue);
+    position:absolute;
+    left: 150px;
+    bottom:20px;
+}
+
+.popular__stars2 .star5, .popular__stars3 .star5 {
+    color: rgba(0,0,0,.15);
+}
+/* End Popular Section Mobile */
+
+/* Popular Section Desktop */
+/* End Popular Section Desktop */
 
 /* Current Search Mobile */
+.current__content {
+    padding: 2rem 1.5rem 1.25rem 1.5rem;
+}
+
+.current__title {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.current__items {
+    margin-top: 1.65rem;
+}
+
+.current__item {
+    display: block;
+    height: 208px;
+    background-color: white;
+    margin-bottom: .85rem;
+    padding: 5px;
+    box-shadow: 2px 1px 10px rgba(0,0,0,.2);
+    border-radius: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.current__image {
+    height: 120px;
+    width: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.current__text {
+    padding-left: 10px;
+    word-wrap: wrap;
+}
+
+.current__hotel {
+    margin-top: .35rem;
+    margin-bottom: .35rem;
+}
+
+.current__description {
+    margin-top: 0;
+    font-size: .875rem;
+}
+
+.current__stars {
+    font-size: .7rem;
+    color: var(--clr-blue);
+    position:absolute;
+    left: 15px;
+    bottom:10px;
+}
+
+.current__more {
+    margin-top: 1.75rem;
+}
+
+.current__more:hover {
+    color: var(--clr-blue);
+}
+
+.current__stars1 .star5, 
+.current__stars3 .star5,
+.current__stars4 .star5,
+.current__stars5 .star5 {
+    color: rgba(0,0,0,.15);
+} 
+
+.current__stars3 .star4 {
+    color: rgba(0,0,0,.15);
+}
+/* End Current Search Mobile */
+
 
 /* Current Search Desktop */
+/* End Current Search Desktop */
 
 
 /* Activities Section Mobile */
+/* End Activities Section Mobile */
 
 /* Activities Section Desktop */
+/* End Activities Section Desktop */
 
 
 /* Footer Section Mobile */
+/* End Footer Section Mobile */
 
 /* Footer Section Desktop */
+/* End Footer Section Desktop */
