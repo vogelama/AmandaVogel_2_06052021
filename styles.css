@@ -257,7 +257,7 @@ header {
     }
 
     .search__description {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
     }
 }
 
@@ -302,7 +302,7 @@ header {
 }
 /* End Search Section Desktop */
 
-/* Filter Section Mobile/Desktop */
+/* Filter Section Mobile */
 .filter {
     margin: 0 1.5rem 1.75rem 1.5rem;
 }
@@ -380,6 +380,10 @@ header {
     padding-left: 35px;
     font-size: 1rem;
 }
+/* End Filter Section Mobile */
+
+
+/* Filter Section Desktop */
 
 @media (min-width: 494px) {
     .filter__description {
@@ -413,18 +417,21 @@ header {
    .filter__titleitems {
        display: flex;
        place-items: center;
-   }
-
-   .filter__items {
-       padding-top: 14px;
+       padding-top: 0;
+       padding-bottom: 0;
    }
 
    .filter__title {
        padding-right: 25px;
        line-height: 50px;
+       margin-top: 0;
+   }
+
+   .filter__description {
+       margin-top: 0;
    }
 }
-/* End Filter Section Mobile/Desktop */
+/* End Filter Section Desktop */
 
 /* Popular Section Mobile */
 .popular {
