@@ -54,12 +54,13 @@ a {
 
 header {
     padding: .15rem 0;
-    margin: 1rem 1rem 0 1.5rem;
+    margin: 1.55rem 1rem 0 1.5rem;
 }
 
 .logo {
     float: left;
-    width: 5.5rem;
+    width: 6rem;
+    padding-top: .5rem;
 }
 
 .nav {
@@ -85,7 +86,7 @@ header {
 .nav__link {
       text-decoration: none;
       color: black;
-      padding: 2rem 1rem;
+      padding: 2.6rem 1rem;
 }
 
 .nav__list2 .nav__link {
@@ -124,7 +125,7 @@ header {
     }
 
     header {
-        margin-top: 1rem;
+        margin-top: 1.25rem;
         margin-left: 0;
         margin-right: 0;
     }
@@ -132,6 +133,7 @@ header {
     .logo {
         width: 6.5rem;
         margin-left: 1.5rem;
+        padding-top: 0;
     }
 
     .nav {
@@ -149,7 +151,7 @@ header {
 
     .nav__list2 {
         justify-content: center;
-        margin-top: 1.5rem;
+        margin-top: 1.65rem;
     }
 
     .nav__list2 .nav__link {
@@ -251,7 +253,7 @@ header {
     }
 
     .search__title {
-        margin-top: .5rem;
+        margin-top: 1.75rem;
     }
 
     .search__description {
@@ -351,7 +353,7 @@ header {
 .filter__item-description {
     text-align: right;
     padding-left: 60px;
-    padding-right: 13px;
+    padding-right: 18px;
     font-size: .95rem;
     font-weight: var(--fw-bold);
 }
@@ -361,22 +363,39 @@ header {
     height: 50px;
     place-items: center;
     margin-top: 1rem;
+    position: relative;
 }
 
 .icon__info {
     color: var(--clr-blue);
-    display: inline-block;
     padding: 3px 8px;
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 50%;
     font-size: .85rem;
     top: 3px;
-    align-self: center;
+    position:absolute;
 }
 
 .filter__text {
-    padding-left: 10px;
+    padding-left: 35px;
     font-size: 1rem;
+}
+
+@media (min-width: 494px) {
+    .filter__description {
+        position: static;
+    }
+    
+    .icon__info {
+        display: inline-block;
+        align-self: center;
+        position: static;
+    }
+
+    .filter__text {
+        padding-left: 10px;
+    }
+
 }
 
 @media (min-width: 850px) {
@@ -384,6 +403,26 @@ header {
         margin-right: 2.5rem;
         margin-left: 2.5rem;
     }
+
+    .filter__item {
+        margin-right: 1.25rem;
+    }
+}
+
+@media (min-width: 960px) {
+   .filter__titleitems {
+       display: flex;
+       place-items: center;
+   }
+
+   .filter__items {
+       padding-top: 14px;
+   }
+
+   .filter__title {
+       padding-right: 25px;
+       line-height: 50px;
+   }
 }
 /* End Filter Section Mobile/Desktop */
 
@@ -393,7 +432,7 @@ header {
 }
 
 .popular__content {
-    padding: 2rem 1.5rem 1.75rem 1.5rem;
+    padding: 2.5rem 1.5rem 1.75rem 1.5rem;
 }
 
 .popular__heading {
@@ -500,7 +539,7 @@ header {
 
 @media (min-width: 1250px) {
     .popular__items {
-        height: 515px;
+        height: 510px;
     }
 }
 /* End Popular Section Desktop */
@@ -586,7 +625,7 @@ header {
     color: rgba(0,0,0,.15);
 } 
 
-.current__stars3 .star4 {
+.current__stars4 .star4 {
     color: rgba(0,0,0,.15);
 }
 /* End Current Search Mobile */
@@ -647,7 +686,7 @@ header {
     }
 
     .current {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
     }
 
 }
@@ -656,7 +695,7 @@ header {
 /* Activities Section Mobile */
 .activity {
     margin:0;
-    padding: 2rem 1.5rem 1.75rem 1.5rem;
+    padding: 1rem 1.5rem 1.75rem 1.5rem;
 }
 
 .activity__title {
@@ -714,6 +753,10 @@ header {
 
 /* Activities Section Desktop */
 @media (min-width: 530px) {
+    .activity {
+        padding-top: 2.5rem;
+    }
+
     .activity__image {
         object-position: 50% 50%;
     }
@@ -770,7 +813,7 @@ header {
     .activity__items {
         display: grid;
         grid-template-columns: repeat(4,auto);
-        grid-template-rows: repeat(2, 60px) repeat(2, 25px) repeat(2, 60px);
+        grid-template-rows: repeat(2, 55px) repeat(2, 25px) repeat(2, 55px);
         grid-gap: 25px 25px;
         margin-bottom: 1.5rem;
     }
@@ -783,6 +826,22 @@ header {
 
     .activity__image {
         object-position: 50% 50%;
+    }
+
+    .activity__item2 .activity__image {
+        object-position: 65% 35%;
+    }
+
+    .activity__item3 .activity__image {
+        object-position: 70% 30%;
+    }
+
+    .activity__item4 .activity__image {
+        object-position: 35% 65%;
+    }
+
+    .activity__item6 .activity__image {
+        object-position: 75% 25%;
     }
 
     .activity__item1 {
@@ -864,7 +923,7 @@ header {
 
 @media (min-width: 1250px) {
     .footer__section {
-        margin-right: 200px;
+        margin-right: 170px;
     }
 }
 /* End Footer Section Desktop */
