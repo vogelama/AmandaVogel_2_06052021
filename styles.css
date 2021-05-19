@@ -814,7 +814,7 @@ header {
         display: grid;
         grid-template-columns: repeat(4,auto);
         grid-template-rows: repeat(2, 55px) repeat(2, 25px) repeat(2, 55px);
-        grid-gap: 25px 25px;
+        grid-gap: 30px;
         margin-bottom: 1.5rem;
     }
 
