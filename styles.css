@@ -13,10 +13,6 @@
 	--fw-bold: 700;
 }
 
-html {
-    min-width: 350px;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -24,6 +20,8 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem; 
     font-weight: var(--fw-light);
+    /* overflow: hidden;
+    overflow-x: hidden; */
 }
 
 h2 {
@@ -55,7 +53,6 @@ header {
 .logo {
     float: left;
     width: 6rem;
-    padding-top: .5rem;
 }
 
 .nav {
@@ -179,6 +176,7 @@ header {
 .search__title {
     margin-top: 0;
     margin-bottom: 0;
+    padding-top: .5rem;
 }
 
 .search__description {
@@ -223,8 +221,18 @@ header {
 
 .search__field {
     width: calc(100% - 60px);
+    height: 100%;
     text-align: left;
+    line-height: 50px;
+}
+
+.search__field h3 {
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin:0;
     padding-left: 18px;
+    padding-right: 10px;
 }
 
 .search__hide {
@@ -240,6 +248,7 @@ header {
 
     .search__title {
         margin-top: 1.75rem;
+        padding-top: 0;
     }
 
     .search__description {
@@ -311,7 +320,7 @@ header {
     border: 2px solid rgba(0,0,0,.15);
     border-radius: 25px;
     margin-bottom: .75rem;
-    margin-right: .75rem;
+    margin-right: .65rem;
     position: relative;
 }
 
@@ -346,10 +355,8 @@ header {
 
 .filter__description {
     display: flex;
-    height: 50px;
-    place-items: center;
-    margin-top: 1rem;
-    position: relative;
+    align-items: flex-start;
+    margin-top: 1.75rem;
 }
 
 .icon__info {
@@ -358,37 +365,16 @@ header {
     border: 1px solid rgba(0,0,0,.1);
     border-radius: 50%;
     font-size: .85rem;
-    top: 3px;
-    position:absolute;
-    top: 1;
-    left: 0;
 }
 
 .filter__text {
-    padding-left: 35px;
+    padding-left: 10px;
     font-size: 1rem;
+    margin-top: 0;
 }
 /* End Filter Section Mobile */
 
-
 /* Filter Section Desktop */
-
-@media (min-width: 494px) {
-    .filter__description {
-        position: static;
-    }
-    
-    .icon__info {
-        display: inline-block;
-        align-self: center;
-        position: static;
-    }
-
-    .filter__text {
-        padding-left: 10px;
-    }
-
-}
 
 @media (min-width: 850px) {
     .filter {
@@ -402,7 +388,7 @@ header {
 }
 
 @media (min-width: 960px) {
-   .filter__titleitems {
+   .filter__title-and-items {
        display: flex;
        place-items: center;
        padding-top: 0;
@@ -414,10 +400,6 @@ header {
        line-height: 50px;
        margin-top: 0;
    }
-
-   .filter__description {
-       margin-top: 0;
-   }
 }
 /* End Filter Section Desktop */
 
@@ -427,7 +409,7 @@ header {
 }
 
 .popular__content {
-    padding: 2.5rem 1.5rem 1.75rem 1.5rem;
+    padding: 2.5rem 1.5rem;
 }
 
 .popular__heading {
@@ -450,15 +432,13 @@ header {
 }
 
 .popular__item {
-    display: block;
-    height: 145px;
     background-color: white;
     margin-bottom: .85rem;
     padding: 5px;
     box-shadow: 2px 1px 10px rgba(0,0,0,.2);
     border-radius: 20px;
     width: 100%;
-    position: relative;
+    display: flex;
 }
 
 .popular__item:hover {
@@ -466,10 +446,17 @@ header {
     cursor: pointer;
 }
 
+.popular__text-and-stars {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
 .popular__image {
-    float:left;
-    height: 100%;
-    width: 135px;
+    width: 40%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -478,27 +465,25 @@ header {
 }
 
 .popular__text {
-    padding-left: 150px;
     word-wrap: wrap;
 }
 
 .popular__hotel {
-    margin-top: .85rem;
-    margin-bottom: .5rem;
+    margin: 0;
+    padding-top: 15px;
 }
 
 .popular__description {
-    margin-top: 0;
-    margin-bottom: 2rem;
+    margin: 0; 
+    padding-top: 10px;
+    padding-bottom: 30px;
     font-size: .875rem;
 }
 
 .popular__stars {
     font-size: .7rem;
     color: var(--clr-blue);
-    position:absolute;
-    left: 150px;
-    bottom:20px;
+    padding-bottom: 10px;
 }
 
 .popular__stars2 .star5, .popular__stars3 .star5 {
@@ -512,6 +497,10 @@ header {
         border-radius: 20px;
         margin: 0 1.5rem;
     }
+
+    .popular__content {
+        padding: 2.5rem 2rem;
+    }
 }
 
 @media (min-width: 850px) {
@@ -522,26 +511,38 @@ header {
 }
 
 @media (min-width: 960px) {
+    .popular-and-current {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-right: 2.5rem;
+        padding-left: 2.5rem;
+    }
+
     .popular {
-        float: right;
-        width: 385px;
+        min-width: 385px; 
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .popular__item {
         margin-bottom: 1.5rem;
     }
+
+    .popular__item:last-of-type {
+        margin-bottom: 0;
+    }
 }
 
-@media (min-width: 1250px) {
-    .popular__items {
-        height: 510px;
+@media (min-width: 1450px) {
+    .popular {
+        min-width: 500px; 
     }
 }
 /* End Popular Section Desktop */
 
 /* Current Search Mobile */
 .current__content {
-    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
 }
 
 .current__title {
@@ -554,15 +555,15 @@ header {
 }
 
 .current__item {
-    display: block;
-    height: 208px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: white;
     margin-bottom: .85rem;
     padding: 5px;
     box-shadow: 2px 1px 10px rgba(0,0,0,.2);
     border-radius: 20px;
     width: 100%;
-    position: relative;
 }
 
 .current__item:hover {
@@ -571,7 +572,7 @@ header {
 }
 
 .current__image {
-    height: 120px;
+    aspect-ratio: 3 / 1;
     width: 100%;
     object-fit: cover;
     border-top-left-radius: 20px;
@@ -586,21 +587,22 @@ header {
 }
 
 .current__hotel {
-    margin-top: .35rem;
-    margin-bottom: .35rem;
+    margin:0;
+    padding-top: 8px;
 }
 
 .current__description {
-    margin-top: 0;
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 8px;
     font-size: .875rem;
 }
 
 .current__stars {
     font-size: .7rem;
     color: var(--clr-blue);
-    position:absolute;
-    left: 15px;
-    bottom:10px;
+    padding-left: 10px;
+    padding-bottom: 5px;
 }
 
 .current__stars1 .star5, 
@@ -615,8 +617,9 @@ header {
 }
 
 .current__more {
-    margin-top: 1.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1.75rem;
 }
 
 .current__more:hover {
@@ -633,6 +636,10 @@ header {
         border-radius: 20px;
     }
 
+    .current__content {
+        padding: 2.5rem 2rem;
+    }
+
     .current__image {
         object-position: 30% 70%;
     }
@@ -642,11 +649,12 @@ header {
     .current__items {
         display: flex;
         flex-wrap: wrap;
-        gap: 15px 25px;
+        gap: 25px;
     }
     
     .current__item {
         width: calc(50% - 13px);
+        margin-bottom: 0;
     }
 }
 
@@ -659,7 +667,12 @@ header {
 
 @media (min-width: 960px) {
     .current {
-        width: calc(100% - 495px);
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .current__image {
+        aspect-ratio: 2 / 1;
     }
 }
 
@@ -668,17 +681,16 @@ header {
         width: calc(33% - 15px);
     }
 
-    .current {
-        margin-bottom: 1rem;
+    .current__more {
+        padding-top: 2.5rem;
     }
-
 }
 /* End Current Search Desktop */
 
 /* Activities Section Mobile */
 .activity {
     margin:0;
-    padding: 1rem 1.5rem 1.75rem 1.5rem;
+    padding: 2rem 1.5rem 1.75rem 1.5rem;
 }
 
 .activity__title {
@@ -690,8 +702,9 @@ header {
 }
 
 .activity__item {
-    display: block;
-    height: 195px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     margin-bottom: 1.5rem;
     box-shadow: 2px 1px 10px rgba(0,0,0,.2);
     border-radius: 20px;
@@ -704,7 +717,8 @@ header {
 }
 
 .activity__image {
-    height: calc(100% - 50px);
+    height: 100%;
+    aspect-ratio: 2.75 / 1;
     width: 100%;
     object-fit: cover;
     object-position: 75% 25%;
@@ -718,14 +732,18 @@ header {
     object-position: 56% 44%;
 }
 
-.activity__item3 .activity__image, 
+.activity__item3 .activity__image {
+    object-position: 70% 30%;
+}
+
 .activity__item5 .activity__image {
     object-position: 85% 15%;
 }
 
 .activity__text {
     margin: 0;
-    padding: 14px 0px 14px 20px;
+    padding: 20px;
+    /* background-color: pink; */
 }
 /* End Activities Section Mobile */
 
@@ -733,7 +751,8 @@ header {
 @media (min-width: 530px) {
     .activity {
         padding-top: 2.5rem;
-    }
+        margin-top: 1rem;
+        }
 
     .activity__item1 .activity__image,
     .activity__item2 .activity__image, 
@@ -771,9 +790,14 @@ header {
 }
 
 @media (min-width: 1250px) {
+    .activity {
+        margin-top: 1rem;
+    }
+
     .activity__items {
         display: grid;
-        grid-template-columns: repeat(4,auto);
+        width: 100%;
+        grid-template-columns: repeat(4, calc(25% - 22.5px)); /*90px of gap divided by 4*/
         grid-template-rows: repeat(2, 55px) repeat(2, 25px) repeat(2, 55px);
         grid-gap: 30px;
         margin-bottom: 1.5rem;
@@ -781,8 +805,18 @@ header {
 
     .activity__item {
         width: 100%;
-        height: auto;
         margin: 0;
+    }
+
+    .activity__image {
+       height: calc(100% - 60px);
+    }
+
+    .activity__text {
+        height: 60px;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .activity__item1 {
@@ -816,7 +850,7 @@ header {
     }
 
     .activity__item2 .activity__image {
-        object-position: 65% 35%;
+        object-position: 60% 40%;
     }
 
     .activity__item3 .activity__image {
@@ -831,17 +865,27 @@ header {
         object-position: 75% 25%;
     }
 }
+
+@media (min-width: 1450px) {
+    .activity__item2 .activity__image {
+        object-position: 50% 50%;
+    }
+}
 /* End Activities Section Desktop */
 
 /* Footer Section Mobile */
 .footer {
     background-color: var(--clr-grey);
-    padding: 2.5rem 1.5rem .5rem 1.5rem;
+    padding: 2.5rem 1.5rem 2.5rem 1.5rem;
     text-align: left;
 }
 
 .footer__section {
     margin-bottom: 2.5rem;
+}
+
+.footer__section:last-of-type {
+    margin-bottom: 0;
 }
 
 .footer__title {
@@ -874,12 +918,19 @@ header {
 
     .footer__section {
         margin-right: 90px;
+        margin-bottom: 0;
     }
 }
 
 @media (min-width: 1250px) {
     .footer__section {
-        margin-right: 170px;
+        margin-right: 200px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .footer__section {
+        margin-right: 275px;
     }
 }
 /* End Footer Section Desktop */
