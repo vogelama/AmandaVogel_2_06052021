@@ -224,13 +224,22 @@ header {
     line-height: 50px;
 }
 
-.search__field h3 {
+.search__field input {
+    width: 100%;
+    height: 100%;
     white-space: nowrap; 
     overflow: hidden;
     text-overflow: ellipsis;
     margin:0;
     padding-left: 18px;
     padding-right: 10px;
+    font-size: 1.2rem;
+    font-weight: var(--fw-bold);
+    border:none;
+}
+
+::placeholder {
+    color: black;
 }
 
 .search__hide {
