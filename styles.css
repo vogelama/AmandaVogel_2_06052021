@@ -50,7 +50,7 @@ header {
 
 .logo {
     float: left;
-    width: 6rem;
+    width: 6.5rem;
 }
 
 .nav {
@@ -232,7 +232,7 @@ header {
     text-overflow: ellipsis;
     margin:0;
     padding-left: 18px;
-    padding-right: 10px;
+    padding-right: 18px;
     font-size: 1.2rem;
     font-weight: var(--fw-bold);
     border:none;
@@ -331,6 +331,10 @@ header {
     position: relative;
 }
 
+.filter__item:last-of-type {
+    margin-right: 0;
+}
+
 .filter__item:hover {
     border: 2px solid var(--clr-blue);
     cursor: pointer;
@@ -354,8 +358,8 @@ header {
 
 .filter__item-description {
     text-align: right;
-    padding-left: 60px;
-    padding-right: 18px;
+    padding-left: 55px;
+    padding-right: 12px;
     font-size: .95rem;
     font-weight: var(--fw-bold);
 }
@@ -363,7 +367,7 @@ header {
 .filter__description {
     display: flex;
     align-items: flex-start;
-    margin-top: 1.75rem;
+    margin-top: 1.65rem;
 }
 
 .icon__info {
@@ -376,8 +380,9 @@ header {
 
 .filter__text {
     padding-left: 10px;
-    font-size: 1rem;
+    font-size: .99rem;
     margin-top: 0;
+    margin-bottom: .75rem;
 }
 /* End Filter Section Mobile */
 
@@ -483,7 +488,7 @@ header {
 .popular__description {
     margin: 0; 
     padding-top: 10px;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
     font-size: .875rem;
 }
 
