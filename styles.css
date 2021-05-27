@@ -413,6 +413,14 @@ header {
        margin-top: 0;
    }
 }
+
+@media (min-width: 1000px) {
+    .filter__item-description {
+        padding-left: 62px;
+        padding-right: 20px;
+        font-size: 1.1rem;
+    }
+}
 /* End Filter Section Desktop */
 
 /* Popular Section Mobile */
@@ -935,7 +943,7 @@ header {
 
 @media (min-width: 1250px) {
     .footer__section {
-        margin-right: 200px;
+        margin-right: 250px;
     }
 }
 
