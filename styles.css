@@ -361,7 +361,7 @@ header {
 .filter__item-description {
     text-align: right;
     padding-left: 55px;
-    padding-right: 12px;
+    padding-right: 10px;
     font-size: .95rem;
     font-weight: var(--fw-bold);
 }
@@ -420,7 +420,7 @@ header {
     .filter__item-description {
         padding-left: 62px;
         padding-right: 20px;
-        font-size: 1.1rem;
+        font-size: 1.05rem;
     }
 }
 /* End Filter Section Desktop */
@@ -499,7 +499,7 @@ header {
 .popular__description {
     margin: 0; 
     padding-top: 10px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     font-size: .875rem;
 }
 
@@ -542,7 +542,7 @@ header {
     }
 
     .popular {
-        min-width: 385px; 
+        min-width: 345px; 
         margin-left: 0;
         margin-right: 0;
     }
@@ -556,9 +556,9 @@ header {
     }
 }
 
-@media (min-width: 1450px) {
+@media (min-width: 1200px) {
     .popular {
-        min-width: 500px; 
+        min-width: 360px; 
     }
 }
 /* End Popular Section Desktop */
@@ -700,7 +700,11 @@ header {
     }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1050px) {
+    .current {
+        margin-right: 2rem;
+    }
+
     .current__item {
         width: calc(33% - 15px);
     }
@@ -813,7 +817,7 @@ header {
     }
 }
 
-@media (min-width: 1250px) {
+@media (min-width: 1050px) {
     .activity {
         margin-top: 1rem;
     }
@@ -948,13 +952,8 @@ header {
 
 @media (min-width: 1250px) {
     .footer__section {
-        margin-right: 250px;
+        margin-right: 200px;
     }
 }
 
-@media (min-width: 1450px) {
-    .footer__section {
-        margin-right: 275px;
-    }
-}
 /* End Footer Section Desktop */
