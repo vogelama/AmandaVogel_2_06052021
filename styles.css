@@ -712,10 +712,6 @@ header {
         margin-left: 0;
         margin-right: 1.75rem;
     }
-
-    .current__image {
-        aspect-ratio: 2 / 1;
-    }
 }
 
 @media (min-width: 1050px) {
