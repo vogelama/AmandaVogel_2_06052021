@@ -20,6 +20,8 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 1rem; 
     font-weight: var(--fw-light);
+    max-width: 1500px;
+    margin: auto;
 }
 
 h2 {
@@ -463,6 +465,7 @@ header {
 
 .popular__item:hover {
     border: 2px solid var(--clr-blue);
+    border-radius: 22px;
     cursor: pointer;
 }
 
@@ -588,6 +591,7 @@ header {
 
 .current__item:hover {
     border: 2px solid var(--clr-blue);
+    border-radius: 22px;
     cursor: pointer;
 }
 
@@ -733,6 +737,7 @@ header {
 
 .activity__item:hover {
     border: 2px solid var(--clr-blue);
+    border-radius: 22px;
     cursor: pointer;
 }
 
